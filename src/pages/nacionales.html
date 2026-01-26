@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Nacionales</title>
+</head>
+<body>
+  <!--navegacion-->
+  <nav class="fixed w-full z-20 top-0 start-0 border-b border-default">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/iconos/ICONO2.webp" class="h-14" alt="Logo" />
+      <span class="self-center text-xl text-heading  text-white  font-semibold whitespace-nowrap">SKYLINE</span>
+  </a>
+  <div class="flex items-center text-white md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" data-dropdown-toggle="language-dropdown-menu" class="flex items-center text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+        <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.00023 16.5C13.1425 16.5 16.5005 13.1421 16.5005 9C16.5005 4.85786 13.1425 1.5 9.00023 1.5C4.85797 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85797 16.5 9.00023 16.5Z" fill="white"/>
+  
+  <path d="M1.5 9C1.5 6.01 2.73 3.3 4.7 1.37C6 1.05 7.4 1.5 9 1.5C10.6 1.5 12 1.05 13.3 1.37C15.27 3.3 16.5 6.01 16.5 9H1.5Z" fill="#AA151B"/>
+  
+  <path d="M1.5 9C1.5 11.99 2.73 14.7 4.7 16.63C6 16.95 7.4 16.5 9 16.5C10.6 16.5 12 16.95 13.3 16.63C15.27 14.7 16.5 11.99 16.5 9H1.5Z" fill="#AA151B"/>
+  
+  <path d="M1.5 6H16.5V12H1.5V6Z" fill="#F1BF00"/>
+</svg>
+        Español (ES)
+      </button>
+      <!-- Dropdown -->
+      <div class="z-50 hidden bg-black border border-default-medium rounded-base shadow-lg w-44" id="language-dropdown-menu">
+        <ul class="p-2 text-sm text-body font-medium" role="none">
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00023 16.5C13.1425 16.5 16.5005 13.1421 16.5005 9C16.5005 4.85786 13.1425 1.5 9.00023 1.5C4.85797 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85797 16.5 9.00023 16.5Z" fill="white"/><path d="M8.67548 8.99996H16.5012C16.5012 8.32308 16.4109 7.66735 16.2428 7.04358H8.67548V8.99996Z" fill="#D80027"/><path d="M8.67548 5.08712H15.4004C14.9413 4.338 14.3543 3.67585 13.6699 3.13074H8.67548V5.08712Z" fill="#D80027"/><path d="M9.0005 16.5001C10.7655 16.5001 12.3878 15.89 13.6689 14.8698H4.33209C5.61318 15.89 7.23548 16.5001 9.0005 16.5001Z" fill="#D80027"/><path d="M2.60125 12.9132H15.4C15.7686 12.3118 16.0545 11.6543 16.2425 10.9567H1.75879C1.94679 11.6543 2.23265 12.3118 2.60125 12.9132Z" fill="#D80027"/><path d="M4.97397 2.67114H5.65741L5.0217 3.13297L5.26453 3.88024L4.62884 3.41841L3.99316 3.88024L4.20292 3.23468C3.6432 3.7009 3.15262 4.24713 2.74834 4.85575H2.96732L2.56266 5.14972C2.49962 5.25489 2.43915 5.36173 2.38121 5.47015L2.57444 6.06485L2.21393 5.80293C2.12432 5.99279 2.04235 6.18692 1.96867 6.3851L2.18156 7.04036H2.96732L2.33161 7.50219L2.57444 8.24947L1.93876 7.78764L1.55798 8.0643C1.51986 8.37066 1.5 8.6827 1.5 8.99941H8.99964C8.99964 4.85763 8.99964 4.36934 8.99964 1.5C7.51811 1.5 6.13703 1.92975 4.97397 2.67114ZM5.26453 8.24947L4.62884 7.78764L3.99316 8.24947L4.23599 7.50219L3.60028 7.04036H4.38604L4.62884 6.29309L4.87165 7.04036H5.65741L5.0217 7.50219L5.26453 8.24947ZM5.0217 5.31758L5.26453 6.06485L4.62884 5.60303L3.99316 6.06485L4.23599 5.31758L3.60028 4.85575H4.38604L4.62884 4.10848L4.87165 4.85575H5.65741L5.0217 5.31758ZM7.95461 8.24947L7.31893 7.78764L6.68325 8.24947L6.92608 7.50219L6.29037 7.04036H7.07613L7.31893 6.29309L7.56173 7.04036H8.34749L7.71178 7.50219L7.95461 8.24947ZM7.71178 5.31758L7.95461 6.06485L7.31893 5.60303L6.68325 6.06485L6.92608 5.31758L6.29037 4.85575H7.07613L7.31893 4.10848L7.56173 4.85575H8.34749L7.71178 5.31758ZM7.71178 3.13297L7.95461 3.88024L7.31893 3.41841L6.68325 3.88024L6.92608 3.13297L6.29037 2.67114H7.07613L7.31893 1.92386L7.56173 2.67114H8.34749L7.71178 3.13297Z" fill="#1A47B8"/></svg>             
+                English (US)
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.96631 11.6087C3.02601 14.4647 5.77508 16.5 8.99981 16.5C12.2245 16.5 14.9736 14.4647 16.0333 11.6087L8.99981 10.9565L1.96631 11.6087Z" fill="#FFDA44"/><path d="M8.99981 1.5C5.77508 1.5 3.02601 3.53531 1.96631 6.39132L8.99981 7.04347L16.0333 6.39129C14.9736 3.53531 12.2245 1.5 8.99981 1.5Z" fill="black"/><path d="M1.96649 6.39136C1.66503 7.20385 1.5 8.08264 1.5 9.00004C1.5 9.91744 1.66503 10.7962 1.96649 11.6087H16.0335C16.335 10.7962 16.5 9.91744 16.5 9.00004C16.5 8.08264 16.335 7.20385 16.0335 6.39136H1.96649Z" fill="#D80027"/></svg>
+                Deutsch
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" fill="white"/><path d="M16.5012 9.00018C16.5012 5.77544 14.4659 3.02637 11.6099 1.96667V16.0337C14.4659 14.974 16.5012 12.2249 16.5012 9.00018Z" fill="#D80027"/><path d="M1.5 8.99994C1.5 12.2247 3.53531 14.9737 6.39132 16.0334V1.96643C3.53531 3.02613 1.5 5.7752 1.5 8.99994Z" fill="#249F58"/></svg>            
+                Italiano
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-4 w-4 me-1.5" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" fill="#D80027"/><path d="M5.60449 6.06458L6.25195 8.05676H8.34668L6.65332 9.29016L7.30078 11.2823L5.60449 10.0519L3.9082 11.2823L4.55859 9.29016L2.8623 8.05676H4.95703L5.60449 6.06458Z" fill="#FFDA44"/><path d="M10.3906 13.1162L9.89551 12.5068L9.16309 12.791L9.58789 12.1318L9.09277 11.5195L9.85156 11.7217L10.2793 11.0625L10.3203 11.8477L11.082 12.0498L10.3467 12.3311L10.3906 13.1162Z" fill="#FFDA44"/><path d="M11.375 11.3291L11.6094 10.5791L10.9678 10.125L11.7529 10.1133L11.9844 9.36328L12.2393 10.1074L13.0244 10.0986L12.3945 10.5674L12.6465 11.3115L12.0049 10.8574L11.375 11.3291Z" fill="#FFDA44"/><path d="M12.7041 7.00488L12.3584 7.71094L12.9209 8.25879L12.1445 8.14746L11.7988 8.85059L11.6641 8.07715L10.8848 7.96582L11.582 7.59961L11.4473 6.82324L12.0098 7.37109L12.7041 7.00488Z" fill="#FFDA44"/><path d="M10.4126 4.86621L10.354 5.64844L11.0835 5.94434L10.3188 6.13184L10.2632 6.91699L9.8501 6.24902L9.08545 6.43652L9.59229 5.83594L9.17627 5.1709L9.90576 5.4668L10.4126 4.86621Z" fill="#FFDA44"/></svg>
+                中文 (繁體)
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-language" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+    </button>
+  </div>
+  <div class="items-center text-white justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+      <li>
+        <a href="/index.html" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Inicio</a>
+      </li>
+      <li>
+        <a href="/src/pages/acereca.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Acerca de</a>
+      </li>
+      <li>
+        
+        <a href="/src/pages/hospedaje.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Hospedaje</a>
+      </li>
+      <li class="flex items-center">
+        <a href="acereca.html#contacto" class="flex items-center  py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Ayuda</a> 
+        <img class="w-7 p-1"  src="/iconos/atencion-al-cliente.png" alt="">
+      </li>
+    </ul>
+     <div class="box-content justify-end p-5 md:block">
+                <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="src/pages/carrito.html">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+                </a>
+            </div>
+  </div>
+  
+  </div>
+  </nav>
+
+<!--hero-->
+<div class="lg:flex mt-24">
+        <div class="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2">
+            <div class="max-w-xl">
+                <h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-6xl">Build Your New <span class="text-blue-600 dark:text-blue-400">Destinos Nacionales</span></h2>
+
+                <p class="mt-4 text-sm text-gray-900 dark:text-gray-900lg:text-base">"Conectamos tus sueños con el mundo: expertos en vuelos nacionales e internacionales con la mejor tarifa y el respaldo que mereces."</p>
+
+                <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
+                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Suscribirse</a>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+            <div class="w-full h-full bg-white bg-contain bg-no-repeat bg-center" style="background-image: url(https://i.postimg.cc/CxyrwGzp/naciiii.jpg)">
+                <div class="w-full h-full bg-black opacity-0"></div>
+            </div>
+        </div>
+    </div>
+
+<div class="-mb-px border-b border-gray-200">
+  <div role="tablist" class="flex gap-1 text-left justify-normal">
+    <button role="tab" aria-selected="true" class="border-b-2 border-blue-600 px-4 py-2 text-4xl font-medium text-blue-600 transition-colors hover:text-blue-700"><font dir="auto"   style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"><a href="internacional.html">➦ Destinos Internacionales</a>
+     
+    </font></font></button>
+  </div>
+</div>
+ <!-- Buscador de vuelos -->
+        <div class="max-w-6xl mx-auto px-4 mt-14 relative z-0">
+          <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+              <i class="fa fa-search mr-2 text-blue-600"></i> Encuentra tu próximo destino
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2">Origen</label>
+                <div class="relative">
+                  <i class="fa fa-plane-departure absolute left-3 top-3 text-gray-400"></i>
+                  <input type="text" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ciudad de origen">
+                </div>
+              </div>
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2">Destino</label>
+                <div class="relative">
+                  <i class="fa fa-plane-arrival absolute left-3 top-3 text-gray-400"></i>
+                  <input type="text" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ciudad de destino">
+                </div>
+              </div>
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2">Fecha de ida</label>
+                <div class="relative">
+                  <i class="fa fa-calendar-alt absolute left-3 top-3 text-gray-400"></i>
+                  <input type="date" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+              </div>
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2">Fecha de vuelta</label>
+                <div class="relative">
+                  <i class="fa fa-calendar-alt absolute left-3 top-3 text-gray-400"></i>
+                  <input type="date" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <button class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition">
+                <i class="fa fa-search mr-2"></i> Buscar Vuelos
+              </button>
+            </div>
+          </div>
+        </div>
+<!--contenido-->
+  <section class="bg-white mt-5">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-red-700">Redescubre la Magia de Nuestro País
+        </h1>
+
+        <p class="mt-4 text-center text-gray-500 dark:text-gray-800">
+           "No importa si el destino está a un paso o al otro lado del océano; en Skyline acortamos las distancias para que tu única preocupación sea disfrutar el viaje."
+        </p>
+
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/1X7tpRVp/centrohis.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (Centro Histórico)</h2>
+                      <h2 class="text-white">El primer Patrimonio de la Humanidad por la UNESCO. Su arquitectura colonial es de las mejores conservadas de América.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $89.99</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/Jhq10KNk/cuenca.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Cuenca</h2>
+                    <h2 class="text-white">La ciudad más romántica del país, famosa por sus cuatro ríos, su Catedral de la Inmaculada Concepción y sus calles empedradas./h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase "> desde $80</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/YShH2kCD/banos.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Baños de Agua Santa</h2>
+                      <h2 class="text-white"> La capital de la aventura. Cascadas, termas y el famoso "Columpio del fin del mundo" frente al volcán Tungurahua.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $60</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12  md:grid-cols-2 xl:grid-cols-3">
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="  background-image:url(https://i.postimg.cc/6qrr7y0G/galapagos.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Islas Galápagos</h2>
+                      <h2 class="text-white">Un paraíso único en el mundo. Aunque es un vuelo nacional, es el destino estrella por su biodiversidad y playas de arena blanca.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $365</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/76yMq31y/Montanita-Ecuador2.png)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Montañita:</h2>
+                    <h2 class="text-white">El punto de encuentro para el surf y la diversión joven. Un ambiente bohemio con playas increíbles.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$80</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/Y96cSzJx/p-lo.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Manta / Puerto López:</h2>
+                    <h2 class="text-white">Famoso por el avistamiento de ballenas jorobadas (en temporada) y la espectacular Playa de los Frailes.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/c4XPbHRh/yasuni.jpg)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">El Yasuní (El Coca):</h2>
+                    <h2 class="text-white">El lugar más biodiverso del planeta. Una experiencia de inmersión total en la selva amazónica profunda.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$70</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/13ywfmb1/volcan-cotopaxi-2.png)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Cotopaxi:</h2>
+                    <h2 class="text-white">El volcán activo más alto del país. Su parque nacional ofrece paisajes lunares y lagunas de altura impresionantes.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$80</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
+                style="background-image:url(https://i.postimg.cc/FzDmpxF3/misah1.png)">
+                <div
+                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Misahuallí (Tena):</h2>
+                    <h2 class="text-white">La entrada a la Amazonía, famosa por sus monos que viven en la plaza central y el contacto directo con comunidades indígenas.</h2>
+                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$48</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--contactanos-->
+<section id="contacto"  class="bg-white ">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="text-center">
+            <p class="font-medium text-xl text-blue-500 dark:text-blue-400">Contáctanos</p>
+
+            <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl ">Ponte en contacto con nosotros</h1>
+
+            <p class="mt-3 text-gray-500 dark:text-gray-400">Nuestro amable equipo siempre está aquí para charlar.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                </span>
+
+                <h2 class="mt-4 text-lg font-medium text-gray-800 ">Correo electrónico</h2>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">Nuestro amable equipo está aquí para ayudar.</p>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">skyline@gmail.com</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                </span>
+                
+                <h2 class="mt-4 text-lg font-medium text-gray-800 ">Oficina</h2>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">Ven a saludarnos a nuestra oficina central.</p>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">Qorner - Uribe Schwarzkopf <br> Oficina 301 <br> Av.Shyris & Av.Portugal (Sector Iñaquito)</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                </span>
+                
+                <h2 class="mt-4 text-lg font-medium text-gray-800 ">Teléfono</h2>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">Lunes a viernes de 8h a 17h.</p>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">+593 0954865742 <br> 02(24658715) Ext-010
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--pie de pagina-->
+    <footer>
+      <div class="container px-6 py-12 mx-auto">
+        <div
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4"
+        >
+          <div class="sm:col-span-2">
+            <h1
+              class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white"
+            >
+              Suscríbete y recibe las mejores ofertas directamente en tu correo
+            </h1>
+
+            <div
+              class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row"
+            >
+              <input
+                id="email"
+                type="text"
+                class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+                placeholder="Email Address"
+              />
+
+              <button
+                class="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+              >
+                Suscribirse
+              </button>
+              <p class="text-sm text-blue-200 mt-4">Al suscribirte aceptas recibir promociones y ofertas de Skyline Travel</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="font-semibold text-gray-800 dark:text-white">
+              Mi Cuenta
+            </p>
+
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Registrarse</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Iniciar Sesion</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Reservar</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <p class="font-semibold text-gray-800 dark:text-white">
+              Legal
+            </p>
+
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Terms & Conditions</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >Finance & Insurance</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-6 border-gray-200 md:my-8 dark:border-gray-700" />
+
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              class="w-20 h-20"
+              src="/iconos/ICONO2.webp"
+              alt="logo"
+            />
+          </a>
+          <span class="text-sm  text-white text-body sm:text-center">© 2026 <a href="https://flowbite.com/" class="hover:underline"><u><strong>Shyline</strong></u></a><strong>. Siguenos en las Redes</strong> 
+          </span>
+
+          <div class="flex -mx-2">
+            <div class="flex items-center gap-3 sm:gap-x-5">
+              <button
+                class="bg-white dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5"
+              >
+                <svg
+                  class="w-5 h-5 sm:h-6 sm:w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3033_94454)">
+                    <path
+                      d="M23.766 12.2764C23.766 11.4607 23.6999 10.6406 23.5588 9.83807H12.24V14.4591H18.7217C18.4528 15.9494 17.5885 17.2678 16.323 18.1056V21.1039H20.19C22.4608 19.0139 23.766 15.9274 23.766 12.2764Z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M12.2401 24.0008C15.4766 24.0008 18.2059 22.9382 20.1945 21.1039L16.3276 18.1055C15.2517 18.8375 13.8627 19.252 12.2445 19.252C9.11388 19.252 6.45946 17.1399 5.50705 14.3003H1.5166V17.3912C3.55371 21.4434 7.7029 24.0008 12.2401 24.0008Z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M5.50253 14.3003C4.99987 12.8099 4.99987 11.1961 5.50253 9.70575V6.61481H1.51649C-0.18551 10.0056 -0.18551 14.0004 1.51649 17.3912L5.50253 14.3003Z"
+                      fill="#FBBC04"
+                    />
+                    <path
+                      d="M12.2401 4.74966C13.9509 4.7232 15.6044 5.36697 16.8434 6.54867L20.2695 3.12262C18.1001 1.0855 15.2208 -0.034466 12.2401 0.000808666C7.7029 0.000808666 3.55371 2.55822 1.5166 6.61481L5.50264 9.70575C6.45064 6.86173 9.10947 4.74966 12.2401 4.74966Z"
+                      fill="#EA4335"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3033_94454">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+
+              <button
+                class="bg-[#1877F2] rounded-lg hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-8 py-2.5"
+              >
+                <svg
+                  class="w-5 h-5 sm:h-6 sm:w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3033_94669)">
+                    <path
+                      d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3033_94669">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+
+              <button
+                class="bg-black rounded-lg hover:bg-black/80 duration-300 transition-colors border border-transparent px-2 py-2.5"
+              >
+                <svg
+                  class="w-5 h-5 sm:h-6 sm:w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.8426 17.1449C20.5099 17.9135 20.1161 18.6211 19.6598 19.2715C19.0378 20.1583 18.5286 20.7721 18.1361 21.113C17.5277 21.6724 16.8759 21.959 16.1779 21.9753C15.6768 21.9753 15.0725 21.8327 14.3691 21.5434C13.6633 21.2555 13.0148 21.113 12.4217 21.113C11.7998 21.113 11.1327 21.2555 10.4193 21.5434C9.70469 21.8327 9.12904 21.9834 8.68892 21.9984C8.01957 22.0269 7.35239 21.7322 6.68644 21.113C6.26139 20.7422 5.72974 20.1067 5.09285 19.2063C4.40951 18.2449 3.84772 17.13 3.4076 15.8589C2.93624 14.486 2.69995 13.1565 2.69995 11.8694C2.69995 10.3951 3.01853 9.12345 3.65665 8.05784C4.15815 7.20191 4.82533 6.52672 5.66035 6.03105C6.49537 5.53539 7.39761 5.2828 8.36925 5.26664C8.9009 5.26664 9.59809 5.43109 10.4645 5.75429C11.3284 6.07858 11.8832 6.24303 12.1264 6.24303C12.3082 6.24303 12.9245 6.05074 13.9692 5.66738C14.9571 5.31186 15.7909 5.16466 16.474 5.22264C18.3249 5.37202 19.7155 6.10167 20.6402 7.41619C18.9849 8.4192 18.166 9.82403 18.1823 11.6262C18.1972 13.03 18.7065 14.1981 19.7073 15.1256C20.1609 15.5561 20.6674 15.8888 21.231 16.1251C21.1087 16.4795 20.9797 16.819 20.8426 17.1449ZM16.5975 0.440369C16.5975 1.54062 16.1956 2.56792 15.3944 3.51878C14.4275 4.64917 13.258 5.30236 11.9898 5.19929C11.9736 5.06729 11.9642 4.92837 11.9642 4.78239C11.9642 3.72615 12.424 2.59576 13.2406 1.67152C13.6483 1.20356 14.1667 0.814453 14.7955 0.504058C15.4229 0.198295 16.0163 0.0292007 16.5744 0.000244141C16.5907 0.147331 16.5975 0.294426 16.5975 0.440355V0.440369Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+             
+      <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+        <a href="https://instagram.com/tu_usuario" class="text-white hover:text-pink-600 dark:hover:text-white transition-colors">
+          <svg class="w-12 h-12  bg-black " fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.012 3.855.06 1.061.048 1.791.222 2.427.471.656.255 1.15.597 1.644 1.09.493.494.835.987 1.09 1.644.25.636.422 1.366.47 2.427.05 1.07.062 1.425.062 3.855s-.012 2.784-.06 3.855c-.048 1.061-.222 1.791-.471 2.427a4.6 4.6 0 01-1.09 1.644 4.6 4.6 0 01-1.644 1.09c-.636.25-1.366.422-2.427.47-1.07.05-1.425.062-3.855.062s-2.784-.012-3.855-.06c-1.061-.048-1.791-.222-2.427-.47a4.6 4.6 0 01-1.644-1.09 4.6 4.6 0 01-1.09-1.644c-.25-.636-.422-1.366-.47-2.427-.05-1.07-.062-1.425-.062-3.855s.012-2.784.06-3.855c.048-1.061.222-1.791.471-2.427a4.6 4.6 0 011.09-1.644 4.6 4.6 0 011.644-1.09c.636-.25 1.366-.422 2.427-.47 1.07-.05 1.425-.062 3.855-.062zm-3.123 1.954c-.95.043-1.467.202-1.81.336-.455.177-.78.388-1.122.73a2.95 2.95 0 00-.73 1.123c-.134.342-.293.86-.337 1.809-.044.95-.053 1.233-.053 3.633s.01 2.683.053 3.633c.044.95.203 1.467.337 1.81.177.455.388.78.73 1.122.342.342.667.553 1.122.73.343.134.86.293 1.81.337.95.044 1.232.053 3.633.053s2.683-.01 3.633-.053c.95-.044 1.468-.203 1.81-.337.454-.177.78-.388 1.122-.73.342-.342.553-.667.73-1.122.134-.343.293-.86.337-1.81.044-.95.053-1.232.053-3.633s-.01-2.683-.053-3.633c-.044-.95-.203-1.468-.337-1.81a2.95 2.95 0 00-.73-1.122 2.95 2.95 0 00-1.122-.73c-.342-.134-.86-.293-1.81-.337-.95-.044-1.233-.053-3.633-.053s-2.683.01-3.633.053zM12 7.235a4.765 4.765 0 100 9.53 4.765 4.765 0 000-9.53zm0 7.942a3.176 3.176 0 110-6.352 3.176 3.176 0 010 6.352zM17.95 7.157a1.144 1.144 0 11-2.288 0 1.144 1.144 0 012.288 0z" clip-rule="evenodd" />
+          </svg>
+          <span class="sr-only">Página de Instagram</span>
+              </a>
+               </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
