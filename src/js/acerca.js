@@ -1,28 +1,34 @@
 import '../css/style.css'; 
 import 'flowbite'; 
 
-// Archivo: js/cookies.js
 
-function aceptarCookies() {
-    const banner = document.getElementById('cookie-banner');
-    
-    // 1. Ya no guardamos nada en localStorage para que vuelva a salir
-    
-    // 2. Aplicar efecto visual de salida
-    banner.style.opacity = '0';
-    
-    // 3. Ocultar después de la animación
-    setTimeout(() => {
-        banner.style.display = 'none';
-    }, 500);
-}
+let carrito = JSON.parse(localStorage.getItem("carrito-general"))||[];
+//funcion para actualizar el carrito
+const actualizarContador = ()=>{
+    const contador = document.getElementById("carrito-contador");
+    //si existe el contador que le pongamos la longitud del carrito
+    if(contador) 
+        contador.innerText=carrito.length;
+};
+actualizarContador();
 
-// Al cargar la página, NO revisamos nada, simplemente dejamos que el HTML lo muestre
-window.addEventListener('load', function() {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) {
-        // Nos aseguramos de que sea visible al recargar
-        banner.style.display = 'block'; 
-        banner.style.opacity = '1';
-    }
+// Función  para aceptar cookies
+const aceptarCookies = () => {
+  localStorage.setItem("cookies-aceptadas", "true");
+  const banner = document.getElementById("cookie-banner");
+  if (banner) banner.style.display = "none";
+};
+
+// Al cargar la página, verificamos si ya se aceptaron
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const cookiesAceptadas = localStorage.getItem("cookies-aceptadas");
+
+  if (cookiesAceptadas === "true" && banner) {
+    banner.style.display = "none";
+  }
+
+  // Asignamos eventos al boton
+  document.getElementById("btn-aceptar").addEventListener("click", aceptarCookies);
+  
 });

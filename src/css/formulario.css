@@ -1,0 +1,16 @@
+/* Esto fuerza el fondo blanco y texto oscuro en el calendario */
+.datepicker {
+    background-color: #ffffff !important;
+    color: #1f2937 !important; /* text-slate-800 */
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegura que los días de la semana y flechas se vean */
+.datepicker-cell, .datepicker-title, .datepicker-controls button {
+    color: #1f2937 !important;
+}
+
+.datepicker-cell:hover {
+    background-color: #f3f4f6 !important; /* hover:bg-gray-100 */
+}

@@ -89,26 +89,38 @@
                 <li>
                   <a href="/src/pages/nacionales.html" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Nacionales</a>
                 </li>
+               
                 
               </ul>
           </div>
         </li>
+        
       <li>
         
         <a href="acereca.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Acerca de</a>
       </li>
+      <li>
+        
+        <a href="formulario.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Registro</a>
+      </li>
+      
       <li class="flex items-center">
         <a href="acereca.html#contacto" class="flex items-center  py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Ayuda</a> 
         <img class="w-7 p-1"  src="/iconos/atencion-al-cliente.png" alt="atencion">
       </li>
     </ul>
      <div class="box-content justify-end p-5 md:block">
-                <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="src/pages/carrito.html">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="/src/pages/carrito.html">
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
-                    <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+                     <span
+              id="carrito-contador"
+              class="absolute -top-1 -right-1 bg-cyan-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white"
+            >
+              0
+            </span>
                 </a>
             </div>
   </div>
@@ -126,7 +138,7 @@
                 encuentra el alojamiento ideal con nuestras tarifas exclusivas y servicio personalizado."</p>
 
                 <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Suscribirse</a>
+                    <a href="formulario.html" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Suscribirse</a>
                    
                 </div>
             </div>
@@ -181,112 +193,22 @@
             </div>
           </div>
         </div>
-<!--contenido-->
-  <section class="bg-white mt-5">
-    <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-red-700">Hospedaje Legendario
-        </h1>
+<!--GRID-->
+<section class="bg-slate-50 min-h-screen px-20 py-20">
+    <h1 class="text-3xl font-black text-red-600 mb-8 uppercase">
+        Los mejores <span class="text-slate-800">hoteles del mundo</span>
+    </h1>
 
-        <p class="mt-4 text-center text-gray-500 dark:text-gray-800">
-          "Dormir es opcional, vivir la experiencia es obligatorio. En Skyline te abrimos las puertas de los alojamientos que han hecho historia en el mundo."
+    <div 
+    id="contenedor-internacional"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <p class="text-orange-400 text-center col-span-full">
+            Cargando Hoteles...
         </p>
-
-
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/mZzgNv72/burj-al-arab.png)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Burj Al Arab Jumeirah (Dubái, Emiratos Árabes)</h2>
-                      <h2 class="text-white">Es el único hotel del mundo calificado con "7 estrellas"</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $79.99</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/ZqQhWq7L/marina-bay-sands-hotel-singapur.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Marina Bay Sands (Singapur)</h2>
-                    <h2 class="text-white">Famoso por su piscina infinita en la azotea (la más grande del mundo) que une tres torres de 55 pisos.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">  $180</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/j2ZcjDcG/ny2.png)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">The Plaza Hotel (Nueva York, EE. UU.)</h2>
-                      <h2 class="text-white"> Situado en la Quinta Avenida junto a Central Park, es el hotel más famoso de Hollywood.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $90</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12  md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="  background-image:url(https://i.postimg.cc/9zHmrfM3/berlin.webp)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Hôtel Ritz (París, Francia)</h2>
-                      <h2 class="text-white">Es considerado el estándar de oro de la hotelería francesa y el refinamiento europeo.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">desde $165</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/RCHnV6sY/Atlantis.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Hotel Atlantis The Palm (Bahamas / Dubái)</h2>
-                    <h2 class="text-white">el de Dubái es un ícono arquitectónico que rinde homenaje al mito de la Atlántida cuenta con un acuario gigante y un parque acuático propio dentro del hotel.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$280</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/Lsxt27TK/plaza-lagos-samborondon-2.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Hotel del Parque (Samborondón/Guayaquil)</h2>
-                    <h2 class="text-white">Es el hotel más exclusivo de la costa. Ubicado dentro del Parque Histórico, es una joya arquitectónica del siglo XIX restaurada.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$50</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/XY7X4vD0/Mashpi.webp)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Mashpi Lodge (Reserva del Chocó)</h2>
-                    <h2 class="text-white">Es una estructura de vidrio y acero en medio del bosque nublado.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$30</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/Vvx92CFz/rumi.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Hacienda Rumiloma (Quito)</h2>
-                    <h2 class="text-white">Situada en las faldas del volcán Pichincha, es una hacienda de estilo rústico-lujoso que ofrece las mejores vistas de la ciudad</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$32 <br> /noche</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/mDM7CDsj/banos2.png)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Samari Spa Resort (Baños de Agua Santa)</h2>
-                    <h2 class="text-white">Es el referente de relajación en la ciudad de las cascadas. Construido en un antiguo monasterio jesuita, combina piedra, madera y hierro para crear un ambiente místico.</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$ <br>/noche</p>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+
 <!--contactanos-->
 <section id="contacto"  class="bg-white ">
     <div class="container px-6 py-12 mx-auto">
@@ -524,6 +446,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="../js/hospedaje.js"></script>
 </body>
 </html>

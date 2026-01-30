@@ -1,0 +1,47 @@
+[
+   {
+        "titulo": "Cuenca",
+        "precio":80,
+        "imagen":"https://i.postimg.cc/Jhq10KNk/cuenca.jpg"
+    },
+    {
+        "titulo":"Baños de Agua Santa",
+        "precio":60,
+        "imagen":"https://i.postimg.cc/YShH2kCD/banos.jpg"
+    },
+    {
+        "titulo": "Islas Galápagos",
+        "precio":365,
+        "imagen":"https://i.postimg.cc/6qrr7y0G/galapagos.jpg"
+    },
+    {
+        "titulo": "El Yasuní (El Coca)",
+        "precio":70,
+        "imagen":"https://i.postimg.cc/c4XPbHRh/yasuni.jpg"
+    },
+    {
+        "titulo": "Quito (Centro Histórico)",
+        "precio":89,
+        "imagen":"https://i.postimg.cc/1X7tpRVp/centrohis.jpg"
+    },
+    {
+        "titulo":"Montañita",
+        "precio":80,
+        "imagen":"https://i.postimg.cc/76yMq31y/Montanita-Ecuador2.png"
+    },
+    {
+        "titulo": "Manta / Puerto López",
+        "precio":50,
+        "imagen":"https://i.postimg.cc/Y96cSzJx/p-lo.jpg"
+    },
+    {
+        "titulo": "Cotopaxi",
+        "precio":80,
+        "imagen":"https://i.postimg.cc/13ywfmb1/volcan-cotopaxi-2.png"
+    },
+    {
+        "titulo": "Misahuallí (Tena)",
+        "precio":48,
+        "imagen":"https://i.postimg.cc/FzDmpxF3/misah1.png"
+    }
+]

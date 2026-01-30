@@ -1,0 +1,47 @@
+[
+   {
+        "titulo": "Burj Al Arab Jumeirah (Dubái, Emiratos Árabes)",
+        "precio":279,
+        "imagen":"https://i.postimg.cc/mZzgNv72/burj-al-arab.png"
+    },
+    {
+        "titulo":"Marina Bay Sands (Singapur)",
+        "precio":180,
+        "imagen":"https://i.postimg.cc/ZqQhWq7L/marina-bay-sands-hotel-singapur.jpg"
+    },
+    {
+        "titulo": "The Plaza Hotel (Nueva York, EE. UU.)",
+        "precio":90,
+        "imagen":"https://i.postimg.cc/j2ZcjDcG/ny2.png"
+    },
+    {
+        "titulo": "Hôtel Ritz (París, Francia)",
+        "precio":165,
+        "imagen":"https://i.postimg.cc/9zHmrfM3/berlin.webp"
+    },
+    {
+        "titulo": "Mashpi Lodge (Reserva del Chocó)",
+        "precio":30,
+        "imagen":"https://i.postimg.cc/XY7X4vD0/Mashpi.webp"
+    },
+    {
+        "titulo":"Hacienda Rumiloma (Quito)",
+        "precio":32,
+        "imagen":"https://i.postimg.cc/Vvx92CFz/rumi.jpg"
+    },
+    {
+        "titulo": "Hotel del Parque (Samborondón/Guayaquil)",
+        "precio":50,
+        "imagen":"https://i.postimg.cc/Lsxt27TK/plaza-lagos-samborondon-2.jpg"
+    },
+    {
+        "titulo": "Samari Spa Resort (Baños de Agua Santa)",
+        "precio":50,
+        "imagen":"https://i.postimg.cc/mDM7CDsj/banos2.png"
+    },
+    {
+        "titulo": "Hotel Atlantis The Palm (Bahamas / Dubái)",
+        "precio":380,
+        "imagen":"https://i.postimg.cc/RCHnV6sY/Atlantis.jpg"
+    }
+]

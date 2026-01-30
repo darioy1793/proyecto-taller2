@@ -82,18 +82,26 @@
         
         <a href="hospedaje.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Hospedaje</a>
       </li>
+      <li> 
+        <a href="/src/pages/formulario.html" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Registro</a>
+      </li>
       <li class="flex items-center">
         <a href="acereca.html#contacto" class="flex items-center  py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Ayuda</a> 
         <img class="w-7 p-1"  src="/iconos/atencion-al-cliente.png" alt="atencion">
       </li>
     </ul>
      <div class="box-content justify-end p-5 md:block">
-                <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="src/pages/carrito.html">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="/src/pages/carrito.html">
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
-                    <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+                     <span
+              id="carrito-contador"
+              class="absolute -top-1 -right-1 bg-cyan-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white"
+            >
+              0
+            </span>
                 </a>
             </div>
   </div>
@@ -110,7 +118,7 @@
                 <p class="mt-4 text-sm text-gray-900 dark:text-gray-900lg:text-base">"Conectamos tus sueños con el mundo: expertos en vuelos nacionales e internacionales con la mejor tarifa y el respaldo que mereces."</p>
 
                 <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Suscribirse</a>
+                    <a href="formulario.html" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Suscribirse</a>
                    
                 </div>
             </div>
@@ -174,120 +182,22 @@
           </div>
         </div>
 <!--contenido-->
-  <section class="bg-white mt-5">
-    <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-red-700">"Descubre las Ciudades más Icónicas del Mundo"
-        </h1>
+<!--GRID-->
+<section class="bg-slate-50 min-h-screen px-20 py-20">
+    <h1 class="text-3xl font-black text-red-600 mb-8 uppercase">
+        Destinos <span class="text-slate-800">Internacionales</span>
+    </h1>
 
-        <p class="mt-4 text-center text-gray-500 dark:text-gray-800">
-           "No importa si el destino está a un paso o al otro lado del océano; en Skyline acortamos las distancias para que tu única preocupación sea disfrutar el viaje."
+    <div 
+    id="contenedor-internacional"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <p class="text-orange-400 text-center col-span-full">
+            Cargando Destinos...
         </p>
-
-
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/wMGrHDLT/miami.png)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      Miami (MIA)</h2>
-                      <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$350</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/rsjrt9Qq/shanghai.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Guayaquil (GYE)hacia
-Shanghái (PVG)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$280</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/fRKrR4x8/madrid.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">España, Quito (UIO)hacia
-                      Madrid (MAD)</h2>
-                      <h2 class="text-white"> desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">#600</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/s2zstR3X/new-york.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                    Nueva York (LGA)</h2>
-                      <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$365</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/T252L0NR/orlando.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      Orlando (MCO)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$480</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/N0LvhGW7/berlin.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      Berlin (BRL)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$1.250</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/PJj7qdFV/mexico.png)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      México (MXC)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$750</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/c1DsbjgN/roma2.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      Roma (RM)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$1.280</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden bg-contain bg-no-repeat bg-center rounded-xl cursor-pointer h-96 group relative"
-                style="background-image:url(https://i.postimg.cc/2SRgcFxx/parisss.jpg)">
-                <div
-                    class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                    <h2 class="mt-4 text-xl font-semibold text-white capitalize">Quito (UIO)hacia
-                      París (PS)</h2>
-                    <h2 class="text-white">desde</h2>
-                    <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase ">$1.600</p>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+
 <!--contactanos-->
 <section id="contacto"  class="bg-white ">
     <div class="container px-6 py-12 mx-auto">
@@ -525,6 +435,6 @@ Shanghái (PVG)</h2>
       </div>
     </footer>
 
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="../js/internacional.js"></script>
 </body>
 </html>
