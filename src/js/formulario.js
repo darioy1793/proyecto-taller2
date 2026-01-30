@@ -16,11 +16,13 @@ const email= document.getElementById("email");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const formulario = document.getElementById("formulario");
+const telefono = document.getElementById("phone-input");
 //Expreciones regulares para la validacion
 const patron = {
      usuario: /^[a-zA-ZÀ-ÿ\s]{3,16}$/, // Letras y espacios (3-16 caracteres)
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Formato email
   clave: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/, // Mínimo 8 caracteres, 1 letra y 1 número
+  telefono: /^\d{10}$/,
 };
 
 //crear una función para habilitar el mensaje de error
@@ -82,6 +84,13 @@ formulario.addEventListener("submit",(e)=>{
             //limpiar el campo
             formulario.reset();
         }
+         //validacion del telefono
+     if(!patron.telefono.test(telefono.value)){
+        mostrarError(telefono,"error-telefono");
+        formularioValido=false;
+    }else{
+        eliminarError(telefono,"error-password");   
+    }
 });
 document.addEventListener('DOMContentLoaded', () => {
     const dropdownButton = document.getElementById('dropdown-phone-button');
